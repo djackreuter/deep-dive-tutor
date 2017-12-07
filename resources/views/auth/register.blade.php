@@ -105,13 +105,13 @@
                           <div class="col-lg-6">
                             <div class="form-check">
                               <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="type" id="exampleRadios1" value="1" checked>
+                                <input class="form-check-input" type="radio" name="type" id="exampleRadios1" value="tutor" checked>
                                 Tutor
                               </label>
                             </div>
                             <div class="form-check">
                               <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="type" id="exampleRadios2" value="0">
+                                <input class="form-check-input" type="radio" name="type" id="exampleRadios2" value="student">
                                 Student
                               </label>
                             </div>
