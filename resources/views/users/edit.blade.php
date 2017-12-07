@@ -39,13 +39,13 @@
           <!-- radio buttons -->
           <div class="form-check">
             <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="type_t" id="exampleRadios1" value="tutor" checked>
+              <input class="form-check-input" type="radio" name="type" id="exampleRadios1" value="1" checked>
               Tutor
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="type_s" id="exampleRadios2" value="student">
+              <input class="form-check-input" type="radio" name="type" id="exampleRadios2" value="0">
               Student
             </label>
           </div>
