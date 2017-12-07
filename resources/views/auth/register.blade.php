@@ -86,6 +86,39 @@
                         </div>
 
                         <div class="form-group row">
+                          <label class="col-lg-4 col-form-label text-lg-right">Bio</label>
+                          <div class="col-lg-6">
+                            <textarea type="text" name="bio" class="form-control" id="" placeholder="500 characters max..."></textarea>
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label class="col-lg-4 col-form-label text-lg-right">Rate</label>
+                          <div class="col-lg-6">
+                            <input type="text" name="rate" class="form-control" id="" placeholder="xx.xx">
+                            <small class="form-text text-muted">If signing up as a tutor.</small>
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label class="col-lg-4 col-form-label text-lg-right">Profile Type</label>
+                          <div class="col-lg-6">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="type" id="exampleRadios1" value="1" checked>
+                                Tutor
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="type" id="exampleRadios2" value="0">
+                                Student
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
                             <div class="col-lg-6 offset-lg-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register
