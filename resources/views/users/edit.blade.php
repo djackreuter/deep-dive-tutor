@@ -5,7 +5,7 @@
   <div class="row justify-content-center">
     <div class="col-lg-6">
       <div class="card card-form">
-        <form method="PUT" action="/users/{user}" class="edit-form">
+        <form method="POST" action="/users/{user}" class="edit-form">
           {{ csrf_field() }}
           <!-- image -->
           <div class="form-group">
