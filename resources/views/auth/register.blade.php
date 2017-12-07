@@ -119,6 +119,13 @@
                         </div>
 
                         <div class="form-group row">
+                          <label class="col-lg-4 col-form-label text-lg-right">Upload a photo</label>
+                          <div class="col-lg-6">
+                            <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
                             <div class="col-lg-6 offset-lg-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register
