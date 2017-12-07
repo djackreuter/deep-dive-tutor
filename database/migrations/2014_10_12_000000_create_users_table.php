@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password', 60);
             $table->string('bio', 500)->nullable();
             $table->decimal('rate', 4, 2)->nullable();
+            $table->tinyInteger('type')->unsigned()->nullable();
             $table->string('image', 128)->nullable();
             $table->rememberToken();
             $table->timestamps();
