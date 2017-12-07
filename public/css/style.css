@@ -6,6 +6,15 @@
   background-color: #053B6E;
 }
 
+.card-form {
+  background-color: #F8F9FA;
+  margin-top: 2rem;
+}
+
+.edit-form {
+  padding: 1.5rem;
+}
+
 .welcome-text {
   padding: 1.5rem;
 }
