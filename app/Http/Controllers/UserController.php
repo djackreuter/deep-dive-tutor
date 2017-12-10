@@ -58,6 +58,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
+      $user = User::find($id);
       return view('users.edit', compact('user'));
     }
 
@@ -71,6 +72,27 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::find($id);
+        // validate the parameters
+        $this->validate(request(), [
+          'name' => 'required|string|max:255',
+          'email' => 'required|string|email|max:255|unique:users',
+          'password' => 'required|string|min:6|confirmed',
+          'bio' => 'string|max:500'
+        ]);
+
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        if($request->input !== "")
+        {
+          $user->password = $request->input(bcrypt('password'));
+        }
+        $user->bio = $request->input('bio');
+        $user->rate = $request->input('rate');
+        $user->type = $request->input('type');
+
+        $user->save();
+
+        return redirect('layouts.home')->with('status', 'Profile Updated!!');
     }
 
     /**
