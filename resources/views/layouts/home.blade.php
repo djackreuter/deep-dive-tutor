@@ -24,5 +24,10 @@
         <a class="btn btn-primary" href="/users/{{ Auth::user()->id }}/edit" role="button">Edit Profile</a>
       </div>
     </div>
+    <div class="row">
+      <div class="col">
+        <a class="btn btn-success" href="/users" role="button">View Tutors</a>
+      </div>
+    </div>
 </div>
 @endsection
