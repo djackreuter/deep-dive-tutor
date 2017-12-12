@@ -15,7 +15,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('users.index');
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -47,7 +47,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $users = User::all();
+        return view('users.show', compact('users'));
     }
 
     /**
@@ -71,7 +72,6 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::find($id);
         // validate the parameters
         $this->validate(request(), [
           'name' => 'required|string|max:255',
@@ -79,6 +79,8 @@ class UserController extends Controller
           'password' => 'required|string|min:6|confirmed',
           'bio' => 'string|max:500'
         ]);
+
+        $user = User::find($id);
 
         $user->name = $request->input('name');
         $user->email = $request->input('email');
@@ -92,7 +94,8 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('layouts.home')->with('status', 'Profile Updated!!');
+        Session::flash('Success', 'Profile Updated!!');
+        return redirect()->route('users.edit', $user->id);
     }
 
     /**
