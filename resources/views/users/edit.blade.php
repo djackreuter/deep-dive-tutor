@@ -1,17 +1,15 @@
-@extends('layouts.master')
-
-@section('content')
+@extends('layouts.master') @section('content')
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-6">
       <div class="card card-form">
-        <form method="POST" action="/users/{user}" class="edit-form">
-          {{ csrf_field() }}
+        <form method="PUT" action="" class="edit-form">
+          {{ csrf_field() }} {{ method_field('PUT') }}
           <!-- image -->
           <div class="form-group">
-           <label for="image">Upload Your Selfie</label>
-           <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
-         </div>
+            <label for="image">Upload Your Selfie</label>
+            <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+          </div>
           <!-- email -->
           <div class="form-group">
             <label for="email">Email:</label>
@@ -51,10 +49,14 @@
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-      </div><!-- /.card -->
-    </div><!-- /.col -->
-  </div><!-- /.row -->
-</div><!-- /.container -->
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->
 
 
 @endsection
