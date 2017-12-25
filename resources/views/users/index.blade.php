@@ -1,3 +1,6 @@
+@extends('layouts.master')
+
+@section('content')
 <h1>Tutors</h1>
 <hr/>
 <ul>
@@ -9,3 +12,4 @@
     </li>
   @endforeach
 </ul>
+@endsection
